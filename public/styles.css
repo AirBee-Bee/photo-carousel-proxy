@@ -1,0 +1,26 @@
+body {
+  display: grid;
+  grid-template: minmax(5%, auto) minmax(25%, auto) minmax(50%, auto) minmax(20%, auto) / 100%;
+}
+
+#photos {
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+#a {
+  grid-area: 3 / 1 / span 1 / span 1;
+  display: grid;
+  grid-template: 100% / 70% 30%;
+}
+
+#description {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+#app {
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+#reviews {
+  grid-area: 4 / 1 / span 1 / span 1;
+}
