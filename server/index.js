@@ -4,38 +4,46 @@ const path = require('path');
 const port = 2222;
 
 app.use((req, res, next) => {
-  console.log(req.url)
+  console.log(req.url);
   next();
-})
+});
 
 app.get('/listing/:listingId', (req, res) => {
-  console.log('listing');
   res.sendFile('index.html', { root: path.join(__dirname, '../public') });
 });
 
+app.get('/styles.css', (req, res) => {
+  res.sendFile('styles.css', { root: path.join(__dirname, '../public') });
+});
+
 app.get('/listing/:listingId/photos', (req, res) => {
-  console.log('photos');
-  res.redirect(`http://localhost:3000/listing/${req.params.listingId}/photos`);
+  res.redirect(`http://localhost:3000${req.url}`);
 });
 
 app.get('/listing/:listingId/info', (req, res) => {
-  console.log('info');
-  res.redirect(`http://localhost:3333/listing/${req.params.listingId}/info`);
+  res.redirect(`http://localhost:3333${req.url}`);
 });
 
 app.get('/listing/:listingId/amenities', (req, res) => {
-  console.log('amens');
-  res.redirect(`http://localhost:3333/listing/${req.params.listingId}/amenities`);
+  res.redirect(`http://localhost:3333${req.url}`);
 });
 
 app.get('/listing/:listingId/highlights', (req, res) => {
-  console.log('highlights');
-  res.redirect(`http://localhost:3333/listing/${req.params.listingId}/highlights`);
+  res.redirect(`http://localhost:3333${req.url}`);
 });
 
 app.get('/listing/:listingId/rooms', (req, res) => {
-  console.log('rooms');
-  res.redirect(`http://localhost:5000/listing/${req.params.listingId}/rooms`);
+  res.redirect(`http://localhost:5000${req.url}`);
 });
+
+// app.get('/propertyScores/*', (req, res) => {
+//   console.log('scores');
+//   res.redirect(`http://localhost:1215/${req.url}`);
+// });
+
+// app.get('/propertyReviews/*', (req, res) => {
+//   console.log('reviews');
+//   res.redirect(`http://localhost:1215/${req.url}`);
+// });
 
 app.listen(port, () => console.log(`Proxy server is listening on port ${port}`));
