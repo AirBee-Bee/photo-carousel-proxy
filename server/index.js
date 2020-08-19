@@ -31,16 +31,16 @@ app.get('/listing/:listingId/rooms', (req, res) => {
   res.redirect(`http://localhost:5000${req.url}`);
 });
 
-app.get('/propertyScores/*', (req, res) => {
-  res.redirect(`http://localhost:1215/propertyScores/amenities`);
+app.get('/propertyScores/:listingId', (req, res) => {
+  res.redirect(`http://localhost:1215${req.url}`);
 });
 
 app.get('/propertyReviews/*', (req, res) => {
-  res.redirect(`http://localhost:1215/propertyReviews/amenities`);
+  res.redirect(`http://localhost:1215${req.url}`);
 });
 
 app.get('/userInfo/*', (req, res) => {
-  res.redirect(`http://localhost:1215/userInfo/11,4,10,16,15,5,3,13,14,19,18,12`);
+  res.redirect(`http://localhost:1215${req.url}`);
 });
 
 app.listen(port, () => console.log(`Proxy server is listening on port ${port}`));

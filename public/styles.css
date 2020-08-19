@@ -1,26 +1,49 @@
 body {
-  display: grid;
-  grid-template: minmax(5%, auto) minmax(25%, auto) minmax(50%, auto) minmax(20%, auto) / 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+#container {
+  margin-left: 11%;
+  margin-bottom: 3%;
+}
+
+header {
+  display: flex;
+}
+
+#logo {
+  margin-top: 2%;
+}
+
+#header {
+  color: yellow;
+  text-shadow: 4px 4px 8px black;
+  text-decoration-line: underline;
+  margin-left: 4%;
+  font-size: 3em;
 }
 
 #photos {
-  grid-area: 2 / 1 / span 1 / span 1;
-}
-
-#a {
-  grid-area: 3 / 1 / span 1 / span 1;
-  display: grid;
-  grid-template: 100% / 70% 30%;
+  margin-top: -50px;
 }
 
 #description {
-  grid-area: 1 / 1 / span 1 / span 1;
+  position: absolute;
 }
 
 #app {
-  grid-area: 1 / 2 / span 1 / span 1;
+  position: sticky;
+  width: 70%;
+  top: 30%;
+  left: 70%;
+  margin-left: 67%;
+  margin-bottom: 700px;
 }
 
 #reviews {
-  grid-area: 4 / 1 / span 1 / span 1;
+  position: relative;
+  margin-top: 850px;
 }
