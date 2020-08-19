@@ -31,7 +31,7 @@ app.get('/listing/:listingId/rooms', (req, res) => {
   res.redirect(`http://localhost:5000${req.url}`);
 });
 
-app.get('/propertyScores/:listingId', (req, res) => {
+app.get('/propertyScores/*', (req, res) => {
   res.redirect(`http://localhost:1215${req.url}`);
 });
 
