@@ -1,13 +1,6 @@
 # Project Name
 
-> Project description
-
-## Related Projects
-
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+> Proxy server which renders all of the components for Su Casa.
 
 ## Table of Contents
 
@@ -17,7 +10,8 @@
 
 ## Usage
 
-> Some usage instructions
+1. Run npm install to install dependencies
+1. Run npm start to start the proxy server
 
 ## Requirements
 
